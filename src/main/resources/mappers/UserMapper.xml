@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.mars.dao.mappers.UserMapper">
+    <select id="addUser">
+        INSERT INTO user
+            (`USERNAME`, `PASSWORD`)
+        VALUES (#{username}, #{password});
+    </select>
+    <select id="findUsername" resultType="String">
+        SELECT * FROM user
+        WHERE USERNAME = #{username}
+    </select>
+    <select id="matchPassword" resultType="String">
+        SELECT * FROM user
+        WHERE USERNAME = #{username} AND PASSWORD = #{password}
+    </select>
+</mapper>

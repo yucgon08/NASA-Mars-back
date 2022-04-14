@@ -1,0 +1,15 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: mars-service
+
+  datasource:
+    password: October_10
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://127.0.0.1:3306/marsDB?useUnicode=true&characterEncoding=UTF-8&serverTimeZone=UTC%2D8
+
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
